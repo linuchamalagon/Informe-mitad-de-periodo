@@ -1,0 +1,174 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="es">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<title>\{\{TITULO_SENTENCIA\}\}</title>\
+\
+<style>\
+:root \{\
+  --color-primario: #1a2a4f;\
+  --color-acento: #0a66c2;\
+  --color-fondo: #f4f6f8;\
+  --color-resaltado: #eef5ff;\
+\}\
+\
+body \{\
+  font-family: 'Segoe UI', sans-serif;\
+  background-color: var(--color-fondo);\
+  margin: 0;\
+  padding: 40px 20px;\
+  display: flex;\
+  justify-content: center;\
+\}\
+\
+.card \{\
+  background: white;\
+  max-width: 850px;\
+  width: 100%;\
+  border-radius: 16px;\
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);\
+  padding: 45px;\
+\}\
+\
+h1 \{\
+  margin: 0;\
+  font-size: 30px;\
+  color: var(--color-primario);\
+\}\
+\
+.subtitle \{\
+  margin-top: 8px;\
+  font-size: 18px;\
+  color: #555;\
+\}\
+\
+.meta \{\
+  margin-top: 5px;\
+  font-size: 14px;\
+  color: #888;\
+\}\
+\
+.accordion \{\
+  margin-top: 35px;\
+\}\
+\
+.accordion-item \{\
+  border-top: 1px solid #e5e5e5;\
+\}\
+\
+.accordion-button \{\
+  background: none;\
+  border: none;\
+  width: 100%;\
+  text-align: left;\
+  padding: 20px 0;\
+  font-size: 18px;\
+  font-weight: 600;\
+  cursor: pointer;\
+  color: var(--color-primario);\
+  transition: 0.3s;\
+\}\
+\
+.accordion-button:hover \{\
+  color: var(--color-acento);\
+\}\
+\
+.accordion-content \{\
+  max-height: 0;\
+  overflow: hidden;\
+  transition: max-height 0.4s ease;\
+  font-size: 15.5px;\
+  color: #444;\
+  line-height: 1.7;\
+\}\
+\
+.accordion-content p \{\
+  margin-bottom: 16px;\
+\}\
+\
+.highlight \{\
+  background: var(--color-resaltado);\
+  padding: 16px;\
+  border-radius: 10px;\
+  margin-top: 12px;\
+\}\
+\
+.footer \{\
+  margin-top: 40px;\
+  font-size: 13px;\
+  color: #888;\
+  text-align: center;\
+\}\
+</style>\
+</head>\
+\
+<body>\
+\
+<div class="card">\
+\
+<h1>\{\{TITULO_SENTENCIA\}\}</h1>\
+<div class="subtitle">\{\{SUBTITULO\}\}</div>\
+<div class="meta">\{\{A\'d1O\}\} | Informe de Mitad de Per\'edodo</div>\
+\
+<div class="accordion">\
+\
+<!-- CONTEXTO -->\
+<div class="accordion-item">\
+<button class="accordion-button">\uc0\u55358 \u56813  Contexto</button>\
+<div class="accordion-content">\
+\{\{CONTEXTO\}\}\
+</div>\
+</div>\
+\
+<!-- CONTENIDO E INNOVACI\'d3N -->\
+<div class="accordion-item">\
+<button class="accordion-button">\uc0\u9878 \u65039  Contenido e innovaci\'f3n</button>\
+<div class="accordion-content">\
+\{\{CONTENIDO\}\}\
+</div>\
+</div>\
+\
+<!-- EFECTOS -->\
+<div class="accordion-item">\
+<button class="accordion-button">\uc0\u55356 \u57101  Efectos</button>\
+<div class="accordion-content">\
+\{\{EFECTOS\}\}\
+</div>\
+</div>\
+\
+</div>\
+\
+<div class="footer">\
+Magistrada Corte Constitucional \'96 Informe de Mitad de Per\'edodo\
+</div>\
+\
+</div>\
+\
+<script>\
+const buttons = document.querySelectorAll(".accordion-button");\
+\
+buttons.forEach(button => \{\
+  button.addEventListener("click", function() \{\
+    const content = this.nextElementSibling;\
+\
+    if (content.style.maxHeight) \{\
+      content.style.maxHeight = null;\
+    \} else \{\
+      document.querySelectorAll(".accordion-content")\
+        .forEach(c => c.style.maxHeight = null);\
+      content.style.maxHeight = content.scrollHeight + "px";\
+    \}\
+  \});\
+\});\
+</script>\
+\
+</body>\
+</html>}
